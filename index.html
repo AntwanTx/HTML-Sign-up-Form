@@ -12,23 +12,93 @@
     </nav>
     <main>
         <h2>Vacation Contest Sign-Up Form</h2>
-        <form> <!-- TODO: Set Action and Method Properties -->
+        <form method="GET" action="results.html">
             <div>
                 <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
-                <!-- TODO: Create a "lastname" input with type "text" -->
-            </div>
-            <!-- TODO: Make fieldset and legend -->
-            <!-- Todo: Email Input -->
-            <!-- Todo: Street Address Input -->
-            <!-- Todo: City, State, and Zip Inputs -->
+                <span class="required-field">*</span>
+                <input type="text" id="firstname" name="firstname" minlength="2" maxlength="35">
+                
+               
+                <label for="lastname">Your Last Name</label>
+                <span class="required-field">*</span>
+                <input type="text" id="lastname" name="lastname" minlength="2" maxlength="35">
 
-            <!-- TODO: Second fieldset -->
-            <!-- TODO: Radio buttons for selecting preferred destination -->
-            <!-- TODO: Color input for selecting favorite color -->
-            <!-- TODO: Checkboxes for selecting extra add-ons -->
+                <label for="age">Your Age</label>
+                <input type="number" name="age" id="age" min="21" max="120">
+                <h5>Must be 21 or older to enter contest</h5>
+                
+            </div>
+                <fieldset>
+                    
+                    <legend>Your Contact Info</legend>
+                        <label for="email">Your Email</label>
+                        <span class="required-field">*</span>
+                        <input type="text" id="email" name="email"> 
+                        
+                        <label for="address">Your Street Address</label>
+                        <input type="text" id="adress" name="address"> 
+                    
+                        <label for="city">Your City</label>
+                        <input type="text" id="city" name="city">
+                        
+                        <label for="zip">Your Zip Code</label>
+                        <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="5-Digit US ZIP Code"> 
+                        
+                        <label for="state">Your State</label>
+                        <input name="state" list="state-list">
+                        <datalist id="state-list">
+                            <option value="AK">Alaska</option> 
+                            <option value="TX">Texas</option>
+                            <option value="CA">Califonia</option>
+                            <option value="HI">Hawaii</option>
+                </fieldset>
+        
+            <fieldset>
+                <legend>Your Preference</legend>
+                    <h3>Choose your location</h3>
+                    <div>
+                        <input type="radio" id="aruba" name="location" value="Aruba" checked> 
+                        <label for="aruba">Aruba</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="japan" name="location" value="Japan"> 
+                        <label for="japan">Japan</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="reykjavik" name="location" value="Reykjavik"> 
+                        <label for="reykjavik">Reykjavik</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="new-zealand" name="location" value="New Zealand"> 
+                        <label for="new-zealand">New Zealand</label>
+                    </div>
+                
+                </fieldset>
             
-            <!-- TODO: Submit Button -->
+           <fieldset>
+            <label for="color">Your Favorite Color</label>
+            <input type="color" id="color" name="color"> 
+            </fieldset>
+           <fieldset>
+            <h3>Choose your Luxurious Extras</h3>
+                    <div>
+                        <input type="checkbox" id="Spa" name="extras" value="Spa" checked> 
+                        <label for="Spa">Spa</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Scuba" name="extras" value="Scuba"> 
+                        <label for="Scuba">Scuba</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="hottub" name="extras" value="hottub"> 
+                        <label for="hottub">In-room hot tub</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="dine" name="extras" value="dine"> 
+                        <label for="dine">Free Buffett</label>
+                    </div>
+                </fieldset>
+            <input type="submit" value="Enter the Contest">
         </form>
     </main>
     <footer>
